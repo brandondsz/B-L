@@ -24,10 +24,10 @@ function setTargetWord() {
           }
         } else {
         // Fallback to daily word logic
-        const today = new Date().toISOString().slice(0, 10); // Get today's date in YYYY-MM-DD format
-        const seed = parseInt(today.replace(/-/g, ''), 10); // Convert date to a number
-        const index = seed % words.length; // Use the seed to pick a word
-        targetWord = words[index];
+        // const today = new Date().toISOString().slice(0, 10); // Get today's date in YYYY-MM-DD format
+        // const seed = parseInt(today.replace(/-/g, ''), 10); // Convert date to a number
+        // const index = seed % words.length; // Use the seed to pick a word
+        targetWord = 'FAITH';
     }
 }
 
