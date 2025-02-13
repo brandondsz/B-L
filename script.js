@@ -7,6 +7,12 @@ let gameOver = false;
 const board = document.getElementById('board');
 const message = document.getElementById('message');
 const keyboard = document.getElementById('keyboard');
+const slideshow = document.getElementById('slideshow');
+const slides = document.querySelectorAll('.slide');
+const prevButton = document.getElementById('prevButton');
+const nextButton = document.getElementById('nextButton');
+const game = document.getElementById('game');
+let currentSlideIndex = 0;
 
 // Initialize the board
 function initializeBoard() {
@@ -37,6 +43,7 @@ function checkGuess() {
         gameOver = true;
         message.textContent = 'Congratulations! You guessed the word!';
         colorCells(targetWord);
+        showSlideshow();
     } else {
         colorCells(targetWord);
         currentAttempt++;
@@ -61,6 +68,37 @@ function colorCells(targetWord) {
         }
     }
 }
+
+// Show the slideshow
+function showSlideshow() {
+    game.style.display = 'none';
+    slideshow.style.display = 'block';
+    showSlide(currentSlideIndex);
+}
+
+// Hide the slideshow
+function hideSlideshow() {
+    slideshow.style.display = 'none';
+}
+
+// Show a specific slide
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.style.display = i === index ? 'block' : 'none';
+    });
+}
+
+// Navigate to the previous slide
+prevButton.addEventListener('click', () => {
+    currentSlideIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
+    showSlide(currentSlideIndex);
+});
+
+// Navigate to the next slide
+nextButton.addEventListener('click', () => {
+    currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+    showSlide(currentSlideIndex);
+});
 
 // Handle keyboard button clicks
 keyboard.addEventListener('click', (e) => {

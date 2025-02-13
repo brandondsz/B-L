@@ -8,46 +8,71 @@
 </head>
 <body>
     <div class="container">
-        <h1>B & L Wordle</h1>
-        <p>Guess our word for today 😊</p>
-        <p id="currentInput"></p>
-        <div id="board"></div>
-        <div id="message"></div>
-        <div id="keyboard">
-            <div class="keyboard-row">
-                <button data-key="Q">Q</button>
-                <button data-key="W">W</button>
-                <button data-key="E">E</button>
-                <button data-key="R">R</button>
-                <button data-key="T">T</button>
-                <button data-key="Y">Y</button>
-                <button data-key="U">U</button>
-                <button data-key="I">I</button>
-                <button data-key="O">O</button>
-                <button data-key="P">P</button>
+        <div id="game">            
+            <h1>B & L Wordle</h1>
+            <p>Guess our word for today 😊</p>
+            <p id="currentInput"></p>
+            <div id="board"></div>
+            <div id="message"></div>
+            <div id="keyboard">
+                <div class="keyboard-row">
+                    <button data-key="Q">Q</button>
+                    <button data-key="W">W</button>
+                    <button data-key="E">E</button>
+                    <button data-key="R">R</button>
+                    <button data-key="T">T</button>
+                    <button data-key="Y">Y</button>
+                    <button data-key="U">U</button>
+                    <button data-key="I">I</button>
+                    <button data-key="O">O</button>
+                    <button data-key="P">P</button>
+                </div>
+                <div class="keyboard-row">
+                    <button data-key="A">A</button>
+                    <button data-key="S">S</button>
+                    <button data-key="D">D</button>
+                    <button data-key="F">F</button>
+                    <button data-key="G">G</button>
+                    <button data-key="H">H</button>
+                    <button data-key="J">J</button>
+                    <button data-key="K">K</button>
+                    <button data-key="L">L</button>
+                </div>
+                <div class="keyboard-row">
+                    <button data-key="Enter">Enter</button>
+                    <button data-key="Z">Z</button>
+                    <button data-key="X">X</button>
+                    <button data-key="C">C</button>
+                    <button data-key="V">V</button>
+                    <button data-key="B">B</button>
+                    <button data-key="N">N</button>
+                    <button data-key="M">M</button>
+                    <button data-key="Backspace">⌫</button>
+                </div>
+            </div>        
+        </div>
+
+        <!-- Slideshow -->
+        <div id="slideshow" class="slideshow">
+            <div class="slide">
+                <img src="https://lh3.googleusercontent.com/pw/AP1GczNkhxebSsklU-2sv_4rWECMgsmb9zjX_WkbtBQO8lX4qpWb2ymWOPvnZJJY3PunRuqxI5Jb3cl38_QJAkvp8xHu4814SQVI8ZY_HZ3qsTt3n_uWuEq2lkWWBwe91oVh6pklMfgnofYxAE22pOIBStIa=w1223-h917-s-no-gm?authuser=0" alt="Image 1">
+                <div class="caption">The first time I met you I didn't have any idea where we would end up :P. I was just going with the flow!</div>
             </div>
-            <div class="keyboard-row">
-                <button data-key="A">A</button>
-                <button data-key="S">S</button>
-                <button data-key="D">D</button>
-                <button data-key="F">F</button>
-                <button data-key="G">G</button>
-                <button data-key="H">H</button>
-                <button data-key="J">J</button>
-                <button data-key="K">K</button>
-                <button data-key="L">L</button>
+            <div class="slide">
+                <img src="https://lh3.googleusercontent.com/pw/AP1GczO_cUmzhYbaVC0ZowKpv1s31PYqVlhqQ7Bthd6bbdIDgX-vJ_jY0VxyWvj2y5iwWGk6vr8P25N_7KH35uPhH9pPNlwsCsK4b3tQ-3vE8t2v8R0uLL_kjIYtFByt_Tt24uf7kj6ZVZrO_nQ_mP6DN-po=w1376-h917-s-no-gm?authuser=0" alt="Image 2">
+                <div class="caption">But the first time I held your hand, it felt sooooo right! Although it was too soon to say anything I knew there was something there.</div>
             </div>
-            <div class="keyboard-row">
-                <button data-key="Enter">Enter</button>
-                <button data-key="Z">Z</button>
-                <button data-key="X">X</button>
-                <button data-key="C">C</button>
-                <button data-key="V">V</button>
-                <button data-key="B">B</button>
-                <button data-key="N">N</button>
-                <button data-key="M">M</button>
-                <button data-key="Backspace">⌫</button>
+            <div class="slide">
+                <img src="https://lh3.googleusercontent.com/pw/AP1GczNTQYeJVaKUsddY94k3y8xn8jmowBoI4dP_fT3CSxA5BCV4GIdfRfeXMa2L1Hi5prvAph2haCqN-NYwHfBgeCOUHZevBhVpk2bFG41KUbn6ryyNcdgRyGzrLpZhdqTuJK8Rk2WmCEjuJYsrFfukFt9n=w690-h917-s-no-gm?authuser=0" alt="Image 3">
+                <div class="caption">The thought of not getting to spend more time with you was so worrying. I honestly didn't think LDR would work. But I had FAITH! Took one day at a time.</div>
             </div>
+            <div class="slide">
+                <img src="https://lh3.googleusercontent.com/pw/AP1GczM_YRjEFEjoRqQj4Gw2M-5Sv8G-QKF8Gg-_nmWPo3mvKgUsarMxSi_dMhgYUNxMKJR1-A6nr5rj1HSFN9aNM_yZCho3cyqX4heDhiqCZj20x-icGKADQKMQmJLy1F_H7rA9iDulosKvt7-Z9Bc--Nhb=w688-h917-s-no-gm?authuser=0" alt="Image 3">
+                <div class="caption">Our trips were so exciting!(Even with the fights :P). I never thought I'd travel so far for someone before. But love makes you do crazy things :P</div>
+            </div>
+            <!-- Navigation buttons -->
+            <button id="prevButton" class="nav-button">&#10094;</button>
+            <button id="nextButton" class="nav-button">&#10095;</button>
         </div>
     </div>
     <script src="words.js"></script>
