@@ -12,6 +12,7 @@ const slides = document.querySelectorAll('.slide');
 const prevButton = document.getElementById('prevButton');
 const nextButton = document.getElementById('nextButton');
 const game = document.getElementById('game');
+const music = document.getElementById('music');
 let currentSlideIndex = 0;
 
 // Initialize the board
@@ -44,6 +45,7 @@ function checkGuess() {
         message.textContent = 'Congratulations! You guessed the word!';
         colorCells(targetWord);
         showSlideshow();
+        playMusic();
     } else {
         colorCells(targetWord);
         currentAttempt++;
@@ -67,6 +69,13 @@ function colorCells(targetWord) {
             cell.classList.add('absent');
         }
     }
+}
+function playMusic() {
+    music.play();
+}
+function stopMusic() {
+    music.pause();
+    music.currentTime = 0; // Reset to the beginning
 }
 
 // Show the slideshow
