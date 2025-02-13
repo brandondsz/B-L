@@ -104,14 +104,15 @@ body {
     text-align: center;
 }
 .slide img {
-    max-width: 90%;
+    max-width: 85%;
     height: auto;
     border-radius: 10px;
 }
 .caption {
     margin-top: 10px;
     font-size: 18px;
-    font-weight: bold;
+    font-style: italic;
+    font-family: cursive;
 }
 .nav-button {
     position: absolute;
